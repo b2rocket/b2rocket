@@ -1,0 +1,23 @@
+Git account https://github.com/b2rocket/b2rocket.git
+
+## Git commands in C9##
+
+git add 'FILENAME.TYPE'
+git add --all
+
+git commit -a -m 'DESCRIPTION'
+
+git push 
+
+git status
+
+git config user.name "Steve"
+#########weitere Branch anlegen############
+git branch zweig/Csite					##erstellen neuen Branch
+
+git branch						## anzeige aller und aktuellen Branch
+
+git checkout zweig/Csite     git checkout master        ## SWITCH DER BRANCH
+
+
+git log							## Anzeige was passiert

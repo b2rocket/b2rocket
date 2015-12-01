@@ -1,0 +1,34 @@
+install mongodb in C9
+https://docs.c9.io/docs/setting-up-mongodb
+
+
+## INSTALL MONGODB ##
+mkdir data
+$ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+$ chmod a+x mongod
+
+## ausführen install und config ## 
+./mongod
+
+## settings in mongod enthalten: ##
+mongod --dbpath=data   ## Because it defaults to /var/db which isn't accessible)
+
+mongod --nojournal     ## Because mongodb usually pre-allocates 2 GB journal file (which exceeds Cloud9 disk space quota)
+
+mongod --bind_ip=$IP   ## Because you can't bind to 0.0.0.0
+
+mongod --rest          ##Runs on default port 28017
+
+##################################
+
+
+
+## start mongoDB Shell in C9 ##
+mongo
+
+
+## Hilfe zur shell ##
+https://docs.mongodb.org/manual/reference/mongo-shell/
+
+## Close Shell ##
+Strg + C
